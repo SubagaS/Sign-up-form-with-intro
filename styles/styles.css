@@ -14,6 +14,7 @@ body {
 :root {
   --red-400: hsl(0, 100%, 74%);
   --green-400: hsl(154, 59%, 51%);
+  --green-300: hsl(154, 65%, 68%);
   --purple-700: hsl(248, 32%, 49%);
   --gray-900: hsl(249, 10%, 26%);
   --purple-350: hsl(246, 25%, 77%);
@@ -124,6 +125,10 @@ form {
     font-weight: 500;
     box-shadow: 0 -4px 0 rgba(0, 0, 0, 9%) inset;
   }
+  button:hover {
+    cursor: pointer;
+    background-color: var(--green-300);
+  }
 
   p {
     width: 100%;
@@ -155,10 +160,11 @@ form {
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: green;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 0.8rem;
   }
 }
 .hidden {
@@ -172,4 +178,42 @@ form {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 40.625rem) {
+  body {
+    background-image: url('../images/bg-intro-desktop.png');
+    background-size: cover;
+  }
+
+  .info-text-container {
+    h2 {
+      font-size: 3.125rem;
+      line-height: 110%;
+    }
+  }
+  form {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+@media screen and (min-width: 59.375rem) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 69.56rem;
+    gap: 3rem;
+  }
+  .info-text-container {
+    text-align: left;
+    margin: 0;
+    max-width: 32.81rem;
+  }
+  form {
+    min-width: 33.75rem;
+  }
+  .attribution {
+    margin: 2rem 0;
+  }
 }
